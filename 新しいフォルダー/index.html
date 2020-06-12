@@ -1,0 +1,1254 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="botu.css" rel="stylesheet" type="text/css">
+    </head>
+    <header>
+        <div id="nameheader">
+            <div id="class-name">学内マップ</div>
+        </div>
+    </header>
+    <body>
+        <!--メインメニュー-->
+        <div id="mainmenu">
+            <div id="mainmenubutton">
+            <div  class="class-button">
+                <a href="#" class="menu-button" style="text-align: center;"
+                    onclick="namer = '教室から探す';
+                             titlemenu();
+                             document.getElementById('classmenu').style.display='block';
+                             document.getElementById('mainmenu').style.display='none'">
+                    教室から探す</a>
+            </div>
+            <div  class="floor-button">
+                <a href="#" class="menu-button" style="text-align: center;"
+                    onclick="namer = 'フロアから探す';
+                             titlemenu();
+                             document.getElementById('floormenu').style.display='block';
+                             document.getElementById('mainmenu').style.display='none'">
+                    フロアから探す</a>
+            </div>
+            </div>
+            <div class="copyright">©カルボナーラ</div>
+        </div>
+
+        <!--フロアから探す画面-->
+        <div id="floormenu" style="display:none">
+            <div class="Floorname">
+                <div class="Floorbuilding">
+                    <h2>キャンパス</h2>
+                </div>
+                <div class="classroom" style="text-align: center;">
+                    <a href="#" onclick="mapnumber = 2; mapview()">1F</a><br>
+                    <a href="#" onclick="mapnumber = 5; mapview()">2F</a><br>
+                    <a href="#" onclick="mapnumber = 6; mapview()">3F</a>
+                </div>
+            </div>
+            <div class="Floorname">
+                <div class="Floorbuilding">
+                    <h2>EDCタワー</h2>
+                </div>
+                <div class="classroom" style="text-align: center;">
+                    <div class="classnameitiran">
+                    <a href="#" onclick="mapnumber = 7; mapview()">1F</a><br>
+                    <a href="#" onclick="mapnumber = 8; mapview()">2F</a><br>
+                    <a href="#" onclick="mapnumber = 9; mapview()">3F</a><br>
+                    <a href="#" onclick="mapnumber = 10; mapview()">4F</a><br>
+                    <a href="#" onclick="mapnumber = 11; mapview()">5F</a>
+                    </div>
+                    <div class="classnameitiran" style="text-align: center;">
+                    <a href="#" onclick="mapnumber = 12; mapview()">6F</a><br>
+                    <a href="#" onclick="mapnumber = 13; mapview()">7F</a><br>
+                    <a href="#" onclick="mapnumber = 14; mapview()">8F</a><br>
+                    <a href="#" onclick="mapnumber = 15; mapview()">9F</a><br>
+                    <a href="#" onclick="mapnumber = 16; mapview()">10F</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Floorname">
+                <div class="Floorbuilding">
+                    <h2>通信教育棟</h2>
+                </div>
+                <div class="classroom" style="text-align: center;">
+                    <a href="#" onclick="mapnumber = 17; mapview()">1F</a>
+                    <a href="#" onclick="mapnumber = 18; mapview()">2F</a>
+                </div>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="returnbuttoner=1; returnmenu();">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--教室から探す画面-->
+        <div id="classmenu" style="display:none">
+            <div class="classname">
+                <div class="classbuilding">
+                    <h2>～教室～</h2>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a href="#map101" onclick="mapnumber = 2; mapview()">101教室</a><br>
+                    <a href="#map102" onclick="mapnumber = 2; mapview()">102教室</a><br>
+                    <a href="#map103" onclick="mapnumber = 2; mapview()">103教室</a><br>
+                    <a href="#map104" onclick="mapnumber = 2; mapview()">104教室</a><br>
+                    <a href="#map105" onclick="mapnumber = 2; mapview()">105教室</a><br>
+                    <a href="#map106" onclick="mapnumber = 2; mapview()">106教室</a><br>
+                    <a href="#map107" onclick="mapnumber = 2; mapview()">107教室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a href="#map111" onclick="mapnumber = 2; mapview()">111教室</a><br>
+                    <a href="#map112" onclick="mapnumber = 2; mapview()">112教室</a><br>
+                    <a href="#map113" onclick="mapnumber = 2; mapview()">113教室</a><br>
+                    <a href="#map114" onclick="mapnumber = 2; mapview()">114教室</a><br>
+                    <a href="#map115" onclick="mapnumber = 2; mapview()">115教室</a><br>
+                    <a href="#map116" onclick="mapnumber = 2; mapview()">116教室</a><br>
+                    <a href="#map118" onclick="mapnumber = 2; mapview()">118教室</a><br>
+                    <a href="#map119" onclick="mapnumber = 2; mapview()">119教室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a href="#map201" onclick="mapnumber = 5; mapview()">201教室</a><br>
+                    <a href="#map202" onclick="mapnumber = 5; mapview()">202教室</a><br>
+                    <a href="#map203" onclick="mapnumber = 5; mapview()">203教室</a><br>
+                    <a href="#map204" onclick="mapnumber = 5; mapview()">204教室</a><br>
+                    <a href="#map205" onclick="mapnumber = 5; mapview()">205教室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a href="#map211" onclick="mapnumber = 5; mapview()">211教室</a><br>
+                    <a href="#map212" onclick="mapnumber = 5; mapview()">212教室</a><br>
+                    <a href="#map213" onclick="mapnumber = 5; mapview()">213教室</a>
+                    </div>
+                </div>
+            </div>
+            <div class="classname">
+                <div class="classbuilding">
+                    <h2>～実習室～</h2>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a href="#jissyu1" onclick="mapnumber = 2; mapview()">実習室1</a><br>
+                    <a href="#jissyu2" onclick="mapnumber = 5; mapview()">実習室2</a><br>
+                    <a href="#jissyu3" onclick="mapnumber = 2; mapview()">実習室3</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a href="#viewmedia" onclick="mapnumber = 5; mapview()">画像メディア実習室</a><br>
+                    <a href="#LLmedia" onclick="mapnumber = 2; mapview()">LL・メディア実習室</a>
+                    </div>
+                </div>
+            </div>
+            <div class="classname">
+                <div class="classbuilding">
+                    <h2>～研究室～</h2>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 2; mapview()">114研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">115研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">116研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">117研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">118研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">119研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 2; mapview()">121研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">122研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">123研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">124研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">125研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">126研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">127研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">128研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">129研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 2; mapview()">130研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">131研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">132研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">133研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">134研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">135研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">136研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">137研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">138研究室</a><br>
+                    <a onclick="mapnumber = 2; mapview()">139研究室</a>
+                    </div>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 5; mapview()">215研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">216研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">217研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">218研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">219研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 5; mapview()">220研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">221研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">222研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">223研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">224研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">225研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">226研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">227研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">228研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">229研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 5; mapview()">230研究室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">231研究室</a>
+                    </div>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 6; mapview()">301研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">302研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">303研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">304研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">305研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">306研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">307研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">308研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">309研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 6; mapview()">310研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">311研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">312研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">313研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">314研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">315研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">316研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">317研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">318研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">319研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 6; mapview()">320研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">321研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">322研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">323研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">324研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">325研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">326研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">327研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">328研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">329研究室</a>
+                    </div>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 6; mapview()">330研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">331研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">332研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 6; mapview()">333研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">334研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">335研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 6; mapview()">336研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">337研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">338研究室</a><br>
+                    <a onclick="mapnumber = 6; mapview()">339研究室</a>
+                    </div>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a onclick= "mapnumber = 18; mapview()">851研究室</a><br>
+                    <a onclick= "mapnumber = 18; mapview()">852研究室</a><br>
+                    <a onclick= "mapnumber = 18; mapview()">853研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick= "mapnumber = 18; mapview()">854研究室</a><br>
+                    <a onclick= "mapnumber = 18; mapview()">855研究室</a><br>
+                    <a onclick= "mapnumber = 18; mapview()">856研究室</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick= "mapnumber = 18; mapview()">857研究室</a><br>
+                    <a onclick= "mapnumber = 18; mapview()">858研究室</a><br>
+                    <a onclick= "mapnumber = 18; mapview()">860研究室</a>
+                    </div>
+                </div>
+                <div class="classbuilding">
+                    <h2>～ゼミ室～</h2>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 2; mapview()">ゼミ室4</a><br>
+                    <a onclick="mapnumber = 2; mapview()">ゼミ室5</a><br>
+                    <a onclick="mapnumber = 5; mapview()">ゼミ室11</a><br>
+                    <a onclick="mapnumber = 5; mapview()">ゼミ室12</a><br>
+                    <a onclick="mapnumber = 5; mapview()">ゼミ室13</a><br>
+                    <a onclick="mapnumber = 5; mapview()">ゼミ室14</a><br>
+                    <a onclick="mapnumber = 5; mapview()">ゼミ室15</a><br>
+                    <a onclick="mapnumber = 5; mapview()">ゼミ室16</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 13; mapview()">ゼミ室21</a><br>
+                    <a onclick="mapnumber = 13; mapview()">ゼミ室22</a><br>
+                    <a onclick="mapnumber = 13; mapview()">ゼミ室23</a><br>
+                    <a onclick="mapnumber = 13; mapview()">ゼミ室24</a><br>
+                    <a onclick="mapnumber = 13; mapview()">ゼミ室25</a><br>
+                    <a onclick="mapnumber = 13; mapview()">ゼミ室26</a>
+                    </div>
+                </div>
+
+                <div class="classbuilding">
+                    <h2>～その他の教室～</h2>
+                </div>
+                <div class="classroom">
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 2; mapview()">体育館</a><br>
+                    <a onclick="mapnumber = 5; mapview()">実行委員会室</a><br>
+                    <a onclick="mapnumber = 5; mapview()">講堂</a>
+                    </div>
+                    <div class="classnameitiran">
+                    <a onclick="mapnumber = 9; mapview()">プロジェクト講義室</a><br>
+                    <a onclick="mapnumber = 9; mapview()">多目的室</a><br>
+                    <a onclick="mapnumber = 10; mapview()">図書室</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="returnbuttoner=2; returnmenu();">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--マップ画像-->
+        <div id="mapdisplay1" style="display:none">
+            <img id="mapviewimage">
+            <div id="map-1" style="display:none">
+                <div class="map-box" id="map119" onclick="namer='119教室'; syousai();document.getElementById('syousaiview119').style.display='block';"></div>
+                <div class="map-box" id="map118" onclick="namer='118教室'; syousai();document.getElementById('syousaiview118').style.display='block';"></div>
+                <div class="map-box" id="map117" onclick="namer='117教室'; syousai();document.getElementById('syousaiview117').style.display='block';"></div> 
+                <div class="map-box" id="map116" onclick="namer='116教室'; syousai();document.getElementById('syousaiview116').style.display='block';"></div> 
+                <div class="map-box" id="map115" onclick="namer='115教室'; syousai();document.getElementById('syousaiview115').style.display='block';"></div> 
+                <div class="map-box" id="map114" onclick="namer='114教室'; syousai();document.getElementById('syousaiview114').style.display='block';"></div> 
+                <div class="map-box" id="map113" onclick="namer='113教室'; syousai();document.getElementById('syousaiview113').style.display='block';"></div> 
+                <div class="map-box" id="map112" onclick="namer='112教室'; syousai();document.getElementById('syousaiview112').style.display='block';"></div> 
+                <div class="map-box" id="map111" onclick="namer='111教室'; syousai();document.getElementById('syousaiview111').style.display='block';"></div> 
+                <div class="map-box" id="map101" onclick="namer='101教室'; syousai();document.getElementById('syousaiview101').style.display='block';"></div>
+                <div class="map-box" id="map102" onclick="namer='102教室'; syousai();document.getElementById('syousaiview102').style.display='block';"></div>
+                <div class="map-box" id="map103" onclick="namer='103教室'; syousai();document.getElementById('syousaiview103').style.display='block';"></div>
+                <div class="map-box" id="map104" onclick="namer='104教室'; syousai();document.getElementById('syousaiview104').style.display='block';"></div>
+                <div class="map-box" id="map105" onclick="namer='105教室'; syousai();document.getElementById('syousaiview105').style.display='block';"></div>
+                <div class="map-box" id="map106" onclick="namer='106教室'; syousai();document.getElementById('syousaiview106').style.display='block';"></div> 
+                <div class="map-box" id="map107" onclick="namer='107教室'; syousai();document.getElementById('syousaiview107').style.display='block';"></div> 
+                <div class="map-box" id="jissyu1" onclick="namer='実習室1'; syousai();document.getElementById('jissyu1view').style.display='block';"></div>
+                <div class="map-box" id="jissyu3" onclick="namer='実習室3'; syousai();document.getElementById('jissyu3view').style.display='block';"></div>
+                <div class="map-box" id="LLmedia" onclick="namer='LLメディア実習室'; syousai();document.getElementById('LLmediaview').style.display='block';"></div> 
+            </div>
+            <div id="map-2" style="display:none">
+                <div class="map-box" id="map200"onclick="namer='200教室'; syousai();document.getElementById('syousaiview200').style.display='block';"></div> 
+                <div class="map-box" id="map201"onclick="namer='201教室'; syousai();document.getElementById('syousaiview201').style.display='block';"></div> 
+                <div class="map-box" id="map204"onclick="namer='204教室'; syousai();document.getElementById('syousaiview204').style.display='block';"></div> 
+                <div class="map-box" id="map203"onclick="namer='203教室'; syousai();document.getElementById('syousaiview203').style.display='block';"></div> 
+                <div class="map-box" id="map205"onclick="namer='205教室'; syousai();document.getElementById('syousaiview205').style.display='block';"></div> 
+                <div class="map-box" id="map202"onclick="namer='202教室'; syousai();document.getElementById('syousaiview202').style.display='block';"></div> 
+                <div class="map-box" id="map213"onclick="namer='213教室'; syousai();document.getElementById('syousaiview213').style.display='block';"></div> 
+                <div class="map-box" id="map211"onclick="namer='211教室'; syousai();document.getElementById('syousaiview211').style.display='block';"></div> 
+                <div class="map-box" id="map212"onclick="namer='212教室'; syousai();document.getElementById('syousaiview212').style.display='block';"></div> 
+                <div class="map-box" id="viewmedia"onclick="namer='画像メディア実習室'; syousai();document.getElementById('viewmwdia').style.display='block';"></div> 
+                <div class="map-box" id="jissyu2"onclick="namer='実習室2'; syousai();document.getElementById('jissyu2view').style.display='block';"></div> 
+            </div>
+        <!--戻るメニュー-->
+        <div class="ber">
+            <div class="sita-ber">
+                <a class="returbotton" href="#" onClick="returnbuttoner=3;document.getElementById('map-2').style.display='none'; returnmenu();">戻る</a>
+            </div>
+        </div>
+        </div>
+
+        <!--詳細-->
+        <!--本館1階-->
+        <div id="syousaiview119" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview119').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview118" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();kuroponzu();document.getElementById('syousaiview118').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview117" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview117').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview106" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="IMG_0204.JPG" width="100px" height="100px" onclick="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview106').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview116" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview116').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview115" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview115').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview114" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview114').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview113" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview113').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview112" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview112').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview111" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview111').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview101" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview101').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview102" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview102').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview103" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview103').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview104" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview104').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview105" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview105').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="LLmediaview" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('LLmediaview').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="jissyu1view" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('jissyu1view').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="jissyu3view" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('jissyu3view').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview107" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview107').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--本館2階-->
+        <div id="syousaiview200" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview200').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview201" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview201').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview202" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview202').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview203" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview203').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview204" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview204').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview205" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview205').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview211" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview211').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview212" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview212').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="syousaiview213" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('syousaiview213').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="viewmwdia" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('viewmwdia').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="jissyu2view" style="display:none">
+            <div id="fhotobox">
+                <h1>photo</h1>
+                <img src="" width="100px" height="100px">
+            </div>
+            <div class="jikannwari">
+                <details>
+                    <summary>時間割</summary>
+                    <table border="1">
+                        <tr><th>1講</th><th> </th></tr>
+                        <tr><th>2講</th><th> </th></tr>
+                        <tr><th>3講</th><th> </th></tr>
+                        <tr><th>4講</th><th> </th></tr>
+                        <tr><th>5講</th><th> </th></tr>
+                        <tr><th>6講</th><th> </th></tr>
+                    </table>
+                </details>
+            </div>
+            <div class="ber">
+                <div class="sita-ber">
+                    <a class="returbotton" href="#" onClick="mapview();document.getElementById('jissyu2view').style.display='none'">
+                        戻る
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--javascript-->
+        <script>
+        /*変数*/
+            var namer=0;
+            var mapnumber=0;
+            var returnbuttonber=0;
+            
+        /*メニューボタン*/
+            var titlemenu = function(){
+                document.getElementById('class-name').innerHTML = namer;
+                document.getElementById('class-name').style.backgroundColor = '#50f7f7';
+            }
+
+        /*マップ画像表示*/
+        function mapview(){
+            document.getElementById('mapdisplay1').style.display='block';
+            var img = document.getElementById("mapviewimage");
+            document.getElementById('nameheader').style.display='none';
+            document.getElementById('classmenu').style.display='none';
+            document.getElementById('floormenu').style.display='none';
+            img.src = "Image/iPad_" + mapnumber + ".png";
+            mapbutton();
+        }
+        function mapbutton(){
+            switch(mapnumber){
+                case 2: document.getElementById('map-1').style.display='block'; break;
+                case 5: document.getElementById('map-2').style.display='block'; break;
+                case 6: document.getElementById('map-3').style.display='block'; break;
+                case 7: document.getElementById('map-4').style.display='block'; break;
+                case 8: document.getElementById('map-5').style.display='block'; break;
+                case 9: document.getElementById('map-6').style.display='block'; break;
+                case 10: document.getElementById('map-7').style.display='block'; break;
+                case 11: document.getElementById('map-8').style.display='block'; break;
+                case 12: document.getElementById('map-9').style.display='block'; break;
+                case 13: document.getElementById('map-10').style.display='block'; break;
+                case 14: document.getElementById('map-11').style.display='block'; break;
+                case 15: document.getElementById('map-12').style.display='block'; break;
+                case 16: document.getElementById('map-13').style.display='block'; break;
+                case 17: document.getElementById('map-14').style.display='block'; break;
+                case 18: document.getElementById('map-15').style.display='block'; break;
+                default: ; break;
+            }
+        }
+
+        /*詳細画面*/
+        function syousai(){
+            document.getElementById('nameheader').style.display='block';
+            document.getElementById('mapdisplay1').style.display='none';
+            document.getElementById('class-name').innerHTML = namer;
+            document.getElementById('class-name').style.backgroundColor = '#FF7F00';
+        }
+        /*戻るボタン*/
+        function returnmenu(){
+            if(returnbuttonber=1){/*フロアから探すからメインメニューへ*/
+                document.getElementById('floormenu').style.display='none';
+                document.getElementById('mainmenu').style.display='block';
+                namer = '学内マップ';
+                titlemenu();
+                document.getElementById('class-name').style.backgroundColor = '#cacaca';
+            }
+            if(returnbuttonber=2){/*教室から探すからメインメニューへ*/
+                document.getElementById('classmenu').style.display='none';
+                document.getElementById('mainmenu').style.display='block';
+                namer = '学内マップ';
+                titlemenu();
+                document.getElementById('class-name').style.backgroundColor = '#cacaca';
+            }
+            if(returnbuttonber=3){/*マップの画面からメインメニューへ*/
+                document.getElementById('mapdisplay1').style.display='none';
+                document.getElementById('mainmenu').style.display='block';
+                document.getElementById('nameheader').style.display='block';
+                namer = '学内マップ';
+                titlemenu();
+                document.getElementById('class-name').style.backgroundColor = '#cacaca';
+            }
+            if(returnbuttonber=4){
+            }
+        }
+        function kuroponzu(){
+            document.getElementById('map-1').style.display='none';
+            document.getElementById('map-2').style.display='none';
+            document.getElementById('map-3').style.display='none';
+            document.getElementById('map-4').style.display='none';
+            document.getElementById('map-5').style.display='none';
+            document.getElementById('map-6').style.display='none';
+            document.getElementById('map-7').style.display='none';
+            document.getElementById('map-8').style.display='none';
+            document.getElementById('map-9').style.display='none';
+            document.getElementById('map-10').style.display='none';
+            document.getElementById('map-11').style.display='none';
+            document.getElementById('map-12').style.display='none';
+            document.getElementById('map-13').style.display='none';
+            document.getElementById('map-14').style.display='none';
+            document.getElementById('map-15').style.display='none';
+        }
+        </script>
+    </div>
+    </body>
+</html>
+
